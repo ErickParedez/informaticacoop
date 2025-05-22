@@ -14,59 +14,59 @@
       height: 1300px;
       margin: 0 auto;
     }
-  
+
     .mindmap-item {
       position: absolute;
       width: 190px;
       text-align: center;
       transition: scale 0.3s ease, box-shadow 0.3s ease;
     }
-  
+
     .mindmap-item:hover {
       scale: 1.1;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
-  
+
     .mindmap-item img {
       width: 190px;
       height: 190px;
       object-fit: cover;
       border-radius: 1rem;
     }
-  
+
     .col-left-top {
       top: 80px;
       left: 60px;
     }
-  
+
     .col-left-bottom {
       top: 360px;
       left: 60px;
     }
-  
+
     .col-right-top {
       top: 80px;
       right: 60px;
     }
-  
+
     .col-right-bottom {
       top: 360px;
       right: 60px;
     }
-  
+
     .bottom-left {
       bottom: 460px;
       left: 60px;
     }
-  
+
     .bottom-right {
       bottom: 460px;
       right: 60px;
     }
-  
+
     .center-image {
       position: absolute;
-      top: 35%; /* subido más */
+      top: 35%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 500px;
@@ -76,28 +76,51 @@
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
       transition: transform 0.4s ease;
     }
-  
+
     .center-image:hover {
       transform: translate(-50%, -50%) scale(1.05);
     }
-  
+
     .extra-bottom-left {
-      bottom: 130px; /* subido más */
+      bottom: 130px;
       left: 20%;
     }
-  
+
     .bottom-center {
-      bottom: 130px; /* subido más */
+      bottom: 130px;
       left: 50%;
       transform: translateX(-50%);
     }
-  
+
     .extra-bottom-right {
-      bottom: 130px; /* subido más */
+      bottom: 130px;
       right: 20%;
     }
+
+    @media (max-width: 768px) {
+      .mindmap-container {
+        position: static;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .mindmap-item,
+      .center-image {
+        position: static !important;
+        transform: none !important;
+        width: 190px !important;
+        height: auto !important;
+      }
+
+      .center-image {
+        width: 300px !important;
+        height: 300px !important;
+      }
+    }
   </style>
-  
 </head>
 
 <body
