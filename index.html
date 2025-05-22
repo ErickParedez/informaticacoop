@@ -17,60 +17,38 @@
 
     .mindmap-item {
       position: absolute;
-      width: 190px;
+      width: 140px;
       text-align: center;
       transition: scale 0.3s ease, box-shadow 0.3s ease;
     }
 
     .mindmap-item:hover {
-      scale: 1.1;
+      scale: 1.05;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
     .mindmap-item img {
-      width: 190px;
-      height: 190px;
+      width: 100%;
+      height: auto;
+      max-height: 140px;
       object-fit: cover;
       border-radius: 1rem;
     }
 
-    .col-left-top {
-      top: 80px;
-      left: 60px;
-    }
-
-    .col-left-bottom {
-      top: 360px;
-      left: 60px;
-    }
-
-    .col-right-top {
-      top: 80px;
-      right: 60px;
-    }
-
-    .col-right-bottom {
-      top: 360px;
-      right: 60px;
-    }
-
-    .bottom-left {
-      bottom: 460px;
-      left: 60px;
-    }
-
-    .bottom-right {
-      bottom: 460px;
-      right: 60px;
-    }
+    .col-left-top { top: 80px; left: 5%; }
+    .col-left-bottom { top: 280px; left: 5%; }
+    .col-right-top { top: 80px; right: 5%; }
+    .col-right-bottom { top: 280px; right: 5%; }
+    .bottom-left { bottom: 360px; left: 5%; }
+    .bottom-right { bottom: 360px; right: 5%; }
 
     .center-image {
       position: absolute;
-      top: 35%;
+      top: 30%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 500px;
-      height: 500px;
+      width: 300px;
+      height: 300px;
       object-fit: cover;
       border-radius: 1rem;
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
@@ -82,51 +60,62 @@
     }
 
     .extra-bottom-left {
-      bottom: 130px;
-      left: 20%;
+      bottom: 80px;
+      left: 10%;
     }
 
     .bottom-center {
-      bottom: 130px;
+      bottom: 80px;
       left: 50%;
       transform: translateX(-50%);
     }
 
     .extra-bottom-right {
-      bottom: 130px;
-      right: 20%;
+      bottom: 80px;
+      right: 10%;
     }
 
-    @media (max-width: 768px) {
+    /* 📱 Mobile responsive */
+    @media (max-width: 500px) {
       .mindmap-container {
-        position: static;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
+        height: 1200px;
       }
 
-      .mindmap-item,
-      .center-image {
-        position: static !important;
-        transform: none !important;
-        width: 190px !important;
-        height: auto !important;
+      .mindmap-item {
+        width: 100px;
+      }
+
+      .mindmap-item img {
+        max-height: 100px;
       }
 
       .center-image {
-        width: 300px !important;
-        height: 300px !important;
+        width: 200px;
+        height: 200px;
       }
+
+      .col-left-top, .col-left-bottom, .col-right-top, .col-right-bottom,
+      .bottom-left, .bottom-right, .extra-bottom-left, .extra-bottom-right {
+        left: auto;
+        right: auto;
+      }
+
+      .col-left-top { top: 20px; left: 10px; }
+      .col-right-top { top: 20px; right: 10px; }
+      .col-left-bottom { top: 120px; left: 10px; }
+      .col-right-bottom { top: 120px; right: 10px; }
+      .bottom-left { bottom: 300px; left: 10px; }
+      .bottom-right { bottom: 300px; right: 10px; }
+      .extra-bottom-left { bottom: 120px; left: 15%; }
+      .extra-bottom-right { bottom: 120px; right: 15%; }
     }
   </style>
 </head>
 
 <body
-  class="bg-gradient-to-br from-green-200 via-lime-100 to-yellow-100 min-h-screen flex flex-col items-center justify-start p-6 font-sans">
+  class="bg-gradient-to-br from-green-200 via-lime-100 to-yellow-100 min-h-screen flex flex-col items-center justify-start p-4 font-sans">
 
-  <h1 class="text-5xl font-extrabold text-green-700 drop-shadow-lg text-center mb-12 animate-pulse">
+  <h1 class="text-3xl md:text-5xl font-extrabold text-green-700 drop-shadow-lg text-center mb-8 md:mb-12 animate-pulse">
     Informatica COOP-1
   </h1>
 
@@ -138,50 +127,50 @@
     <!-- Columna izquierda -->
     <div class="mindmap-item col-left-top">
       <img src="abel.jpeg" />
-      <p class="text-sm font-bold text-green-800">Abel Peñate</p>
+      <p class="text-xs md:text-sm font-bold text-green-800">Abel Peñate</p>
     </div>
 
     <div class="mindmap-item col-left-bottom">
       <img src="erick.jpeg" />
-      <p class="text-sm font-bold text-green-800">Erick Paredes</p>
+      <p class="text-xs md:text-sm font-bold text-green-800">Erick Paredes</p>
     </div>
 
     <!-- Columna derecha -->
     <div class="mindmap-item col-right-top">
       <img src="ana.jpeg" />
-      <p class="text-sm font-bold text-green-800">Ana Rosales</p>
+      <p class="text-xs md:text-sm font-bold text-green-800">Ana Rosales</p>
     </div>
 
     <div class="mindmap-item col-right-bottom">
       <img src="jesus.jpeg" />
-      <p class="text-sm font-bold text-green-800">Jesus Mejia</p>
+      <p class="text-xs md:text-sm font-bold text-green-800">Jesus Mejia</p>
     </div>
 
     <!-- Esquinas medias -->
     <div class="mindmap-item bottom-left">
       <img src="bryan.jpeg" />
-      <p class="text-sm font-bold text-green-800">Bryan Marroquin</p>
+      <p class="text-xs md:text-sm font-bold text-green-800">Bryan Marroquin</p>
     </div>
 
     <div class="mindmap-item bottom-right">
       <img src="rodolfo.jpeg" />
-      <p class="text-sm font-bold text-green-800">Rodolfo Retana</p>
+      <p class="text-xs md:text-sm font-bold text-green-800">Rodolfo Retana</p>
     </div>
 
     <!-- Parte inferior -->
     <div class="mindmap-item extra-bottom-left">
       <img src="felipe.jpeg" />
-      <p class="text-sm font-bold text-green-800">Felipe Quezada</p>
+      <p class="text-xs md:text-sm font-bold text-green-800">Felipe Quezada</p>
     </div>
 
     <div class="mindmap-item bottom-center">
       <img src="merari.jpeg" />
-      <p class="text-sm font-bold text-green-800">Merari Perdomo</p>
+      <p class="text-xs md:text-sm font-bold text-green-800">Merari Perdomo</p>
     </div>
 
     <div class="mindmap-item extra-bottom-right">
       <img src="carlos.jpeg" />
-      <p class="text-sm font-bold text-green-800">Carlos Chinchilla</p>
+      <p class="text-xs md:text-sm font-bold text-green-800">Carlos Chinchilla</p>
     </div>
 
   </div>
