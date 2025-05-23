@@ -151,11 +151,33 @@
     .close-btn:hover {
       color: #fff;
     }
+
+    /* Estilo para el video */
+    .video-container {
+      width: 90%;
+      max-width: 800px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .video-text {
+      font-size: 1.5em;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #f4e542;
+    }
   </style>
 </head>
 <body>
 
-  <h1>FORTALEZAS AREA INFORMATICA</h1>
+  <h1>FORTALEZAS ÁREA INFORMÁTICA</h1>
 
   <!-- Texto adicional debajo del título -->
   <div class="intro-text">
@@ -205,12 +227,22 @@
       <img src="felipe.jpeg" alt="Imagen 9">
       <div class="name">Felipe Quezada</div>
     </div>
+
+  </div>
+
+   <!-- Texto antes del GIF -->
+  <div class="video-text">
+    IA Intelegencia Artificial Aplicada En Informatica COOP-1
+  </div>
+
+  <!-- Contenedor del GIF -->
+  <div class="gif-container">
+    <img src="IA.gif" alt="GIF Descripción">
   </div>
 
   <!-- Overlay para mostrar el texto al hacer clic -->
   <div id="overlay" class="overlay">
     <div class="text" id="overlay-text"></div>
-    <!-- Botón de cierre (X) -->
     <button class="close-btn" onclick="closeOverlay()">X</button>
   </div>
 
@@ -218,13 +250,13 @@
     function showText(text) {
       var overlay = document.getElementById('overlay');
       var overlayText = document.getElementById('overlay-text');
-      overlayText.innerHTML = text; // Actualiza el texto en el overlay (usamos innerHTML para manejar los <br>)
-      overlay.classList.add('active'); // Muestra el overlay
+      overlayText.innerHTML = text;
+      overlay.classList.add('active');
     }
 
     function closeOverlay() {
       var overlay = document.getElementById('overlay');
-      overlay.classList.remove('active'); // Cierra el overlay
+      overlay.classList.remove('active');
     }
   </script>
 
