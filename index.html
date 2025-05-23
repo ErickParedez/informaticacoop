@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,10 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #004d1f; /* Fondo verde oscuro */
-      color: #f4e542; /* Texto amarillo */
+      background-color: #004d1f;
+      /* Fondo verde oscuro */
+      color: #f4e542;
+      /* Texto amarillo */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -26,12 +29,18 @@
     }
 
     @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     .intro-text {
-      font-size: 1em; /* Tamaño más pequeño */
+      font-size: 1em;
+      /* Tamaño más pequeño */
       margin-top: 10px;
       color: #f4e542;
       font-weight: bold;
@@ -43,7 +52,8 @@
       margin: 20px 0;
       position: relative;
       overflow: hidden;
-      cursor: pointer; /* Hace que la imagen sea clicable */
+      cursor: pointer;
+      /* Hace que la imagen sea clicable */
     }
 
     .main-image img {
@@ -54,10 +64,12 @@
 
     .main-image .name {
       position: absolute;
-      bottom: 10px; /* Ajustado para que el nombre esté más abajo */
+      bottom: 10px;
+      /* Ajustado para que el nombre esté más abajo */
       left: 50%;
       transform: translateX(-50%);
-      font-size: 1.5em; /* Ajustar tamaño del nombre */
+      font-size: 1.5em;
+      /* Ajustar tamaño del nombre */
       color: #f4e542;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
       background-color: rgba(0, 0, 0, 0.5);
@@ -96,10 +108,12 @@
 
     .grid-item .name {
       position: absolute;
-      bottom: 5px; /* Ajuste para que el nombre esté más abajo */
+      bottom: 5px;
+      /* Ajuste para que el nombre esté más abajo */
       left: 50%;
       transform: translateX(-50%);
-      font-size: 1em; /* Tamaño reducido del nombre */
+      font-size: 1em;
+      /* Tamaño reducido del nombre */
       color: #f4e542;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
       background-color: rgba(0, 0, 0, 0.5);
@@ -127,7 +141,8 @@
     }
 
     .overlay .text {
-      font-size: 1.2em; /* Tamaño reducido para el texto del overlay */
+      font-size: 1.2em;
+      /* Tamaño reducido para el texto del overlay */
       text-align: center;
       padding: 20px;
       background-color: rgba(0, 0, 0, 0.8);
@@ -173,8 +188,27 @@
       font-weight: bold;
       color: #f4e542;
     }
+
+    .gif-container {
+      width: 80%;
+      /* Ajusta al 80% del ancho disponible */
+      max-width: 400px;
+      /* Máximo ancho de 400px */
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .gif-container img {
+      width: 100%;
+      /* Hace que el GIF ocupe todo el contenedor */
+      height: auto;
+      /* Mantiene las proporciones */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
   </style>
 </head>
+
 <body>
 
   <h1>FORTALEZAS ÁREA INFORMÁTICA</h1>
@@ -185,54 +219,64 @@
   </div>
 
   <!-- Imagen principal clicable -->
-  <div class="main-image" onclick="showText('Las fortalezas del área de informática son las siguientes: <br> - Equipo Responsable <br> - Equipo multidisciplinario <br> - Somos un equipo eficiente <br> - Equipo que se adapta al cambio <br> - Somos un Call Center.')">
+  <div class="main-image"
+    onclick="showText('Las fortalezas del área de informática son las siguientes: <br> - Equipo Responsable <br> - Equipo multidisciplinario <br> - Somos un equipo eficiente <br> - Equipo que se adapta al cambio <br> - Somos un Call Center.')">
     <img src="informaticaperfil.jpeg" alt="Imagen Principal">
     <div class="name">Área Informática</div>
   </div>
 
   <div class="grid-container">
-    <div class="grid-item" onclick="showText('Fortalezas de Abel Peñate: <br> - Enfoque Estratégico <br> - Amante de la tecnología estratégica <br> - Amoroso (con mis hijas) <br> - Responsable en el trabajo <br> - Basketbolero de corazón <br> - Gym Bro <br> - Sin vicios')">
+    <div class="grid-item"
+      onclick="showText('Fortalezas de Abel Peñate: <br> - Enfoque Estratégico <br> - Amante de la tecnología estratégica <br> - Amoroso (con mis hijas) <br> - Responsable en el trabajo <br> - Basketbolero de corazón <br> - Gym Bro <br> - Sin vicios')">
       <img src="abel.jpeg" alt="Imagen 1">
       <div class="name">Abel Peñate</div>
     </div>
-    <div class="grid-item" onclick="showText('Fortalezas de Ana Rosales: <br> - Analítica <br> - Metódica y responsable con su trabajo <br> - Se le facilita el uso de herramientas tecnológicas')">
+    <div class="grid-item"
+      onclick="showText('Fortalezas de Ana Rosales: <br> - Analítica <br> - Metódica y responsable con su trabajo <br> - Se le facilita el uso de herramientas tecnológicas')">
       <img src="ana.jpeg" alt="Imagen 2">
       <div class="name">Ana Rosales</div>
     </div>
-    <div class="grid-item" onclick="showText('Fortalezas de Erick Paredes: <br> - Sociable <br> - Amable <br> - Vida saludable <br> - Apasionado por el Futbol, Gimnasio y Música')">
+    <div class="grid-item"
+      onclick="showText('Fortalezas de Erick Paredes: <br> - Sociable <br> - Amable <br> - Vida saludable <br> - Apasionado por el Futbol, Gimnasio y Música')">
       <img src="erick.jpeg" alt="Imagen 3">
       <div class="name">Erick Paredes</div>
     </div>
-    <div class="grid-item" onclick="showText('Fortalezas de Jesús Mejía: <br> - Prudencia <br> - Persistencia <br> - Integridad <br> - Amabilidad <br> - Concentración')">
+    <div class="grid-item"
+      onclick="showText('Fortalezas de Jesús Mejía: <br> - Prudencia <br> - Persistencia <br> - Integridad <br> - Amabilidad <br> - Concentración')">
       <img src="jesus.jpeg" alt="Imagen 4">
       <div class="name">Jesús Mejia</div>
     </div>
-    <div class="grid-item" onclick="showText('Fortalezas de Bryan Marroquín: <br> - Perseverante <br> - Competitivo <br> - Búsqueda de superación personal')">
+    <div class="grid-item"
+      onclick="showText('Fortalezas de Bryan Marroquín: <br> - Perseverante <br> - Competitivo <br> - Búsqueda de superación personal')">
       <img src="bryan.jpeg" alt="Imagen 5">
       <div class="name">Bryan Marroquin</div>
     </div>
-    <div class="grid-item" onclick="showText('Fortalezas de Rodolfo Retana: <br> - Empático <br> - Sociable <br> - Responsable <br> - Resiliente')">
+    <div class="grid-item"
+      onclick="showText('Fortalezas de Rodolfo Retana: <br> - Empático <br> - Sociable <br> - Responsable <br> - Resiliente')">
       <img src="rodolfo.jpeg" alt="Imagen 6">
       <div class="name">Rodolfo Retana</div>
     </div>
-    <div class="grid-item" onclick="showText('Fortalezas de Merari Perdomo: <br> - Constancia <br> - Responsabilidad <br> - Honestidad <br> - Perseverancia')">
+    <div class="grid-item"
+      onclick="showText('Fortalezas de Merari Perdomo: <br> - Constancia <br> - Responsabilidad <br> - Honestidad <br> - Perseverancia')">
       <img src="merari.jpeg" alt="Imagen 7">
       <div class="name">Merari Perdomo</div>
     </div>
-    <div class="grid-item" onclick="showText('Fortalezas de Carlos Chinchilla: <br> - Autoconfianza <br> - Disciplina <br> - Optimismo <br> - Respeto')">
+    <div class="grid-item"
+      onclick="showText('Fortalezas de Carlos Chinchilla: <br> - Autoconfianza <br> - Disciplina <br> - Optimismo <br> - Respeto')">
       <img src="carlos.jpeg" alt="Imagen 8">
       <div class="name">Carlos Chinchilla</div>
     </div>
-    <div class="grid-item" onclick="showText('Fortalezas de Felipe Quezada: <br> - Empático <br> - Respetuoso <br> - Enérgico')">
+    <div class="grid-item"
+      onclick="showText('Fortalezas de Felipe Quezada: <br> - Empático <br> - Respetuoso <br> - Enérgico')">
       <img src="felipe.jpeg" alt="Imagen 9">
       <div class="name">Felipe Quezada</div>
     </div>
 
   </div>
 
-   <!-- Texto antes del GIF -->
+  <!-- Texto antes del GIF -->
   <div class="video-text">
-    IA Intelegencia Artificial Aplicada En Informatica COOP-1
+    IA Aplicada En Informatica COOP-1
   </div>
 
   <!-- Contenedor del GIF -->
@@ -261,4 +305,5 @@
   </script>
 
 </body>
+
 </html>
