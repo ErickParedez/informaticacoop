@@ -1,72 +1,232 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Informatica COOP-1</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORTALEZAS AREA INFORMATICA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #004d1f; /* Fondo verde oscuro */
+      color: #f4e542; /* Texto amarillo */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 20px;
+      text-transform: uppercase;
+      animation: fadeIn 3s ease-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .intro-text {
+      font-size: 1em; /* Tamaño más pequeño */
+      margin-top: 10px;
+      color: #f4e542;
+      font-weight: bold;
+    }
+
+    .main-image {
+      width: 90%;
+      max-width: 600px;
+      margin: 20px 0;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer; /* Hace que la imagen sea clicable */
+    }
+
+    .main-image img {
+      width: 100%;
+      height: auto;
+      filter: brightness(80%);
+    }
+
+    .main-image .name {
+      position: absolute;
+      bottom: 10px; /* Ajustado para que el nombre esté más abajo */
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5em; /* Ajustar tamaño del nombre */
+      color: #f4e542;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 90%;
+      max-width: 900px;
+      margin: 20px 0;
+    }
+
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .grid-item:hover {
+      transform: scale(1.05);
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(80%);
+    }
+
+    .grid-item .name {
+      position: absolute;
+      bottom: 5px; /* Ajuste para que el nombre esté más abajo */
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1em; /* Tamaño reducido del nombre */
+      color: #f4e542;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    /* Estilo para el overlay (caja emergente) */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      color: #f4e542;
+      z-index: 10;
+    }
+
+    .overlay.active {
+      display: flex;
+    }
+
+    .overlay .text {
+      font-size: 1.2em; /* Tamaño reducido para el texto del overlay */
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 2em;
+      color: #f4e542;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .close-btn:hover {
+      color: #fff;
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-br from-green-200 via-lime-100 to-yellow-100 min-h-screen p-4">
+<body>
 
-  <h1 class="text-3xl md:text-5xl font-extrabold text-green-700 text-center mb-6 animate-pulse">
-    Informatica COOP-1
-  </h1>
+  <h1>FORTALEZAS AREA INFORMATICA</h1>
 
-  <!-- Imagen central -->
-  <div class="flex justify-center mb-8">
-    <img src="informaticaperfil.jpeg" alt="Centro" class="w-40 h-40 sm:w-60 sm:h-60 rounded-xl object-cover shadow-xl transition-transform duration-300 hover:scale-105" />
+  <!-- Texto adicional debajo del título -->
+  <div class="intro-text">
+    Dar clic en cada imagen para conocer las fortalezas
   </div>
 
-  <!-- Grid de miembros -->
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-    
-    <!-- Cada persona -->
-    <div class="text-center">
-      <img src="abel.jpeg" alt="Abel" class="w-full rounded-xl object-cover h-32 sm:h-40 mb-2" />
-      <p class="text-sm font-semibold text-green-800">Abel Peñate</p>
-    </div>
-
-    <div class="text-center">
-      <img src="erick.jpeg" alt="Erick" class="w-full rounded-xl object-cover h-32 sm:h-40 mb-2" />
-      <p class="text-sm font-semibold text-green-800">Erick Paredes</p>
-    </div>
-
-    <div class="text-center">
-      <img src="ana.jpeg" alt="Ana" class="w-full rounded-xl object-cover h-32 sm:h-40 mb-2" />
-      <p class="text-sm font-semibold text-green-800">Ana Rosales</p>
-    </div>
-
-    <div class="text-center">
-      <img src="jesus.jpeg" alt="Jesús" class="w-full rounded-xl object-cover h-32 sm:h-40 mb-2" />
-      <p class="text-sm font-semibold text-green-800">Jesús Mejía</p>
-    </div>
-
-    <div class="text-center">
-      <img src="bryan.jpeg" alt="Bryan" class="w-full rounded-xl object-cover h-32 sm:h-40 mb-2" />
-      <p class="text-sm font-semibold text-green-800">Bryan Marroquín</p>
-    </div>
-
-    <div class="text-center">
-      <img src="rodolfo.jpeg" alt="Rodolfo" class="w-full rounded-xl object-cover h-32 sm:h-40 mb-2" />
-      <p class="text-sm font-semibold text-green-800">Rodolfo Retana</p>
-    </div>
-
-    <div class="text-center">
-      <img src="felipe.jpeg" alt="Felipe" class="w-full rounded-xl object-cover h-32 sm:h-40 mb-2" />
-      <p class="text-sm font-semibold text-green-800">Felipe Quezada</p>
-    </div>
-
-    <div class="text-center">
-      <img src="merari.jpeg" alt="Merari" class="w-full rounded-xl object-cover h-32 sm:h-40 mb-2" />
-      <p class="text-sm font-semibold text-green-800">Merari Perdomo</p>
-    </div>
-
-    <div class="text-center">
-      <img src="carlos.jpeg" alt="Carlos" class="w-full rounded-xl object-cover h-32 sm:h-40 mb-2" />
-      <p class="text-sm font-semibold text-green-800">Carlos Chinchilla</p>
-    </div>
-
+  <!-- Imagen principal clicable -->
+  <div class="main-image" onclick="showText('Las fortalezas del área de informática son las siguientes: <br> - Equipo Responsable <br> - Equipo multidisciplinario <br> - Somos un equipo eficiente <br> - Equipo que se adapta al cambio <br> - Somos un Call Center.')">
+    <img src="informaticaperfil.jpeg" alt="Imagen Principal">
+    <div class="name">Área Informática</div>
   </div>
+
+  <div class="grid-container">
+    <div class="grid-item" onclick="showText('Fortalezas de Abel Peñate: <br> - Enfoque Estratégico <br> - Amante de la tecnología estratégica <br> - Amoroso (con mis hijas) <br> - Responsable en el trabajo <br> - Basketbolero de corazón <br> - Gym Bro <br> - Sin vicios')">
+      <img src="abel.jpeg" alt="Imagen 1">
+      <div class="name">Abel Peñate</div>
+    </div>
+    <div class="grid-item" onclick="showText('Fortalezas de Ana Rosales: <br> - Analítica <br> - Metódica y responsable con su trabajo <br> - Se le facilita el uso de herramientas tecnológicas')">
+      <img src="ana.jpeg" alt="Imagen 2">
+      <div class="name">Ana Rosales</div>
+    </div>
+    <div class="grid-item" onclick="showText('Fortalezas de Erick Paredes: <br> - Sociable <br> - Amable <br> - Vida saludable <br> - Apasionado por el Futbol, Gimnasio y Música')">
+      <img src="erick.jpeg" alt="Imagen 3">
+      <div class="name">Erick Paredes</div>
+    </div>
+    <div class="grid-item" onclick="showText('Fortalezas de Jesús Mejía: <br> - Prudencia <br> - Persistencia <br> - Integridad <br> - Amabilidad <br> - Concentración')">
+      <img src="jesus.jpeg" alt="Imagen 4">
+      <div class="name">Jesús Mejia</div>
+    </div>
+    <div class="grid-item" onclick="showText('Fortalezas de Bryan Marroquín: <br> - Perseverante <br> - Competitivo <br> - Búsqueda de superación personal')">
+      <img src="bryan.jpeg" alt="Imagen 5">
+      <div class="name">Bryan Marroquin</div>
+    </div>
+    <div class="grid-item" onclick="showText('Fortalezas de Rodolfo Retana: <br> - Empático <br> - Sociable <br> - Responsable <br> - Resiliente')">
+      <img src="rodolfo.jpeg" alt="Imagen 6">
+      <div class="name">Rodolfo Retana</div>
+    </div>
+    <div class="grid-item" onclick="showText('Fortalezas de Merari Perdomo: <br> - Constancia <br> - Responsabilidad <br> - Honestidad <br> - Perseverancia')">
+      <img src="merari.jpeg" alt="Imagen 7">
+      <div class="name">Merari Perdomo</div>
+    </div>
+    <div class="grid-item" onclick="showText('Fortalezas de Carlos Chinchilla: <br> - Autoconfianza <br> - Disciplina <br> - Optimismo <br> - Respeto')">
+      <img src="carlos.jpeg" alt="Imagen 8">
+      <div class="name">Carlos Chinchilla</div>
+    </div>
+    <div class="grid-item" onclick="showText('Fortalezas de Felipe Quezada: <br> - Empático <br> - Respetuoso <br> - Enérgico')">
+      <img src="felipe.jpeg" alt="Imagen 9">
+      <div class="name">Felipe Quezada</div>
+    </div>
+  </div>
+
+  <!-- Overlay para mostrar el texto al hacer clic -->
+  <div id="overlay" class="overlay">
+    <div class="text" id="overlay-text"></div>
+    <!-- Botón de cierre (X) -->
+    <button class="close-btn" onclick="closeOverlay()">X</button>
+  </div>
+
+  <script>
+    function showText(text) {
+      var overlay = document.getElementById('overlay');
+      var overlayText = document.getElementById('overlay-text');
+      overlayText.innerHTML = text; // Actualiza el texto en el overlay (usamos innerHTML para manejar los <br>)
+      overlay.classList.add('active'); // Muestra el overlay
+    }
+
+    function closeOverlay() {
+      var overlay = document.getElementById('overlay');
+      overlay.classList.remove('active'); // Cierra el overlay
+    }
+  </script>
 
 </body>
 </html>
